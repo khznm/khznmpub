@@ -1,0 +1,11 @@
+- name: "Testing with ansbile"
+  hosts: localhost
+  connection: local
+  tasks:
+  
+  - name: "Run the commands form github"
+    shell: "ls -lrt"
+    register: "output"
+    
+  - debug: var=output.stdout_lines
+  
